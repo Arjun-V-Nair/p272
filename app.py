@@ -48,7 +48,7 @@ def get_otp():
     client = Client(account_sid, auth_token)
                                             
     verification_check = client.verify \
-        .services('Enter your Service SID here') \
+        .services('SK57934c4733578b2e15c51a9ae0f894d6' \
         .verification_checks \
         .create(to=mobile_number, code=received_otp)
     print(verification_check.status)
